@@ -96,3 +96,13 @@ LEFT JOIN
     Posts p ON c.Id = p.CategoryId
 GROUP BY 
     c.Name;
+
+
+	BACKUP DATABASE [YourDatabaseName]
+TO DISK = 'D:\Backups\YourDatabaseBackup.bak'
+WITH FORMAT,
+     NAME = 'Full Backup of YourDatabaseName',
+     SKIP,
+     NOREWIND,
+     NOUNLOAD,
+     STATS = 10;
